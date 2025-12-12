@@ -1,0 +1,213 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* NEXORA Design System - Multi-Platform Theme */
+
+@layer base {
+  :root {
+    /* Homepage Theme Colors (Modern SaaS) */
+    --homepage-background: 0 0% 100%;         /* White #FFFFFF */
+    --homepage-cards: 220 14% 96%;            /* Light Gray-Blue #F8F9FC */
+    --homepage-headers: 210 17% 94%;          /* Light Gray #F0F2F5 */
+    --homepage-primary: 260 84% 60%;          /* Purple #7F56D9 */
+    --homepage-primary-hover: 260 84% 55%;    /* Darker Purple */
+    --homepage-accent: 315 100% 81%;          /* Light Pink #FFA3FD */
+    --homepage-headings: 0 0% 11%;            /* Dark Text #1D1D1F */
+    --homepage-secondary: 220 14% 36%;        /* Gray Text #4B5563 */
+    --homepage-chatbot: 260 84% 60%;          /* Purple #7F56D9 */
+    
+    /* Career Advisor Theme Colors (Professional White/Purple) */
+    --career-background: 0 0% 100%;           /* White #FFFFFF */
+    --career-cards: 220 14% 96%;              /* Light Gray-Blue #F8F9FC */
+    --career-headers: 210 17% 94%;            /* Light Gray #F0F2F5 */
+    --career-primary: 260 84% 60%;            /* Purple #7F56D9 */
+    --career-primary-hover: 260 84% 55%;      /* Darker Purple */
+    --career-blue: 207 90% 54%;               /* Blue #339CFF */
+    --career-orange: 24 95% 53%;              /* Orange #FF9344 */
+    --career-pink: 326 87% 78%;               /* Pink #FF8ED4 */
+    --career-green: 102 76% 39%;              /* Green #38B000 */
+    --career-cyan: 195 100% 50%;              /* Cyan #00B3FF */
+    --career-red: 0 100% 31%;                 /* Red #FF4E4E */
+    --career-dark-red: 0 100% 36%;            /* Dark Red #B80000 */
+    --career-headings: 0 0% 11%;              /* Dark Text #1D1D1F */
+    --career-text: 220 14% 36%;               /* Gray Text #4B5563 */
+    
+    /* Mental Health Theme Colors (Keep as is) */
+    --mental-primary: 169 13% 57%;        /* Coastal Teal #729A94 */
+    --mental-secondary: 249 46% 85%;      /* Lavender #C4B5FD */
+    --mental-accent: 153 57% 81%;         /* Gentle Green #A7F3D0 */
+    --mental-cards: 0 0% 100%;            /* White #FFFFFF */
+    --mental-background: 162 100% 96%;    /* Light Mint #E6FFFA */
+    
+    /* Text Colors */
+    --text-primary: 220 17% 17%;          /* #1F2937 */
+    --text-secondary: 215 14% 45%;        /* #6B7280 */
+    --text-cool-secondary: 215 20% 39%;   /* #64748B */
+    
+    /* Default theme (Homepage) */
+    --background: var(--homepage-background);
+    --foreground: var(--homepage-headings);
+    --card: var(--homepage-cards);
+    --card-foreground: var(--homepage-headings);
+    --popover: var(--homepage-cards);
+    --popover-foreground: var(--homepage-headings);
+    --primary: var(--homepage-primary);
+    --primary-foreground: 0 0% 100%;
+    --secondary: var(--homepage-accent);
+    --secondary-foreground: var(--homepage-headings);
+    --muted: var(--homepage-cards);
+    --muted-foreground: var(--homepage-secondary);
+    --accent: var(--homepage-accent);
+    --accent-foreground: var(--homepage-headings);
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: var(--homepage-headers);
+    --input: var(--homepage-cards);
+    --ring: var(--homepage-primary);
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+  }
+
+  /* Theme Classes */
+  .homepage-theme {
+    --background: var(--homepage-background);
+    --foreground: var(--homepage-headings);
+    --card: var(--homepage-cards);
+    --card-foreground: var(--homepage-headings);
+    --primary: var(--homepage-primary);
+    --secondary: var(--homepage-accent);
+    --accent: var(--homepage-accent);
+    --muted: var(--homepage-cards);
+    --muted-foreground: var(--homepage-secondary);
+    --border: var(--homepage-headers);
+    --input: var(--homepage-cards);
+  }
+
+  .career-theme {
+    --background: var(--career-background);
+    --foreground: var(--career-headings);
+    --card: var(--career-cards);
+    --card-foreground: var(--career-headings);
+    --popover: var(--career-cards);
+    --popover-foreground: var(--career-headings);
+    --primary: var(--career-primary);
+    --primary-foreground: 0 0% 100%;
+    --secondary: var(--career-blue);
+    --secondary-foreground: 0 0% 100%;
+    --muted: var(--career-headers);
+    --muted-foreground: var(--career-text);
+    --accent: var(--career-orange);
+    --accent-foreground: 0 0% 100%;
+    --destructive: var(--career-red);
+    --destructive-foreground: 0 0% 100%;
+    --border: var(--career-headers);
+    --input: var(--career-cards);
+    --ring: var(--career-primary);
+  }
+
+  .mental-theme {
+    --background: var(--mental-background);
+    --card: var(--mental-cards);
+    --primary: var(--mental-primary);
+    --secondary: var(--mental-secondary);
+    --accent: var(--mental-accent);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  }
+  
+  /* Smooth transitions for theme changes */
+  * {
+    transition: background-color 300ms ease, border-color 300ms ease, color 300ms ease;
+  }
+  
+  /* Gradient utilities */
+  .gradient-primary-pink {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+  }
+  
+  .gradient-primary-pink-hover {
+    background: linear-gradient(135deg, hsl(var(--primary)/0.9), hsl(var(--accent)/0.9));
+  }
+  
+  :root {
+    --gradient-progress: linear-gradient(90deg, #7F56D9, #339CFF);
+    --gradient-assessment: linear-gradient(135deg, #7F56D9, #FFA3FD);
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.3s ease-out;
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

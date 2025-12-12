@@ -1,0 +1,776 @@
+[
+  {
+    "stage": "10th",
+    "name": "Polytechnic Diploma",
+    "description": "A 3-year technical diploma after 10th that prepares students for engineering and applied science careers.",
+    "salary_range": "₹2-6 LPA",
+    "skills": ["Technical Knowledge", "Practical Skills", "Problem-Solving"],
+    "specialties": [
+      {"name": "Mechanical Engineering"},
+      {"name": "Civil Engineering"},
+      {"name": "Computer Engineering"}
+    ],
+    "future_paths": ["B.Tech lateral entry", "Junior Engineer jobs", "ITI Instructor"],
+    "jobs": ["Technician", "Junior Engineer", "Lab Assistant"],
+    "mentors": [],
+    "lecture_platforms": ["NPTEL", "Coursera", "Polytechnic Portals"],
+    "example_queries": [
+      "What can I do after 10th with polytechnic?",
+      "Best diploma courses after 10th"
+    ],
+    "tags": ["polytechnic", "engineering", "diploma", "after 10th"],
+
+    "mentor_templates": {
+      "coding": "Oh wow, you’re in {stage} and exploring coding! Choosing {name} builds {skills}, and later you can aim for {future_paths}.",
+      "mechanical": "Since you love machines, {name} will develop hands-on skills in {specialties} and prepare you for {jobs}.",
+      "general": "At {stage}, {name} is a great path. It strengthens {skills}, opens {jobs}, and prepares for {future_paths}."
+    },
+
+    "intelligence_layer": {
+      "user_stage_response": "Being in 10th, this is the perfect time to explore diplomas and technical options.",
+      "user_interest_response": "Relate interest (coding, mechanical, etc.) to skills, specialties, and future paths.",
+      "encouragement_style": "Always motivating and mentor-like, e.g., 'Great step!', 'That’s inspiring!', 'Smart move!'."
+    }
+  },
+  {
+    "stage": "10th",
+    "name": "ITI (Industrial Training Institute)",
+    "description": "Vocational training program for skill development in technical trades.",
+    "salary_range": "₹1.5-5 LPA",
+    "skills": ["Hands-on Work", "Technical Skills", "Machinery Knowledge"],
+    "specialties": [
+      {"name": "Electrician"},
+      {"name": "Fitter"},
+      {"name": "Welder"}
+    ],
+    "future_paths": ["Jobs in PSUs", "Apprenticeships", "Private Technician Jobs"],
+    "jobs": ["Electrician", "Fitter", "Technician", "Plumber"],
+    "mentors": [],
+    "lecture_platforms": ["Skill India", "NSDC", "YouTube - Skill Courses"],
+    "example_queries": [
+      "ITI courses after 10th",
+      "Best trades in ITI"
+    ],
+    "tags": ["iti", "vocational", "skills", "after 10th"],
+
+    "mentor_templates": {
+      "technical": "If you like hands-on technical work, {name} will teach {skills} in areas like {specialties}, preparing you for {jobs}.",
+      "mechanical": "{name} offers practical exposure to {specialties} at your stage ({stage}) and sets a strong foundation for {future_paths}.",
+      "general": "At {stage}, {name} is a solid choice. Gain {skills}, work in {jobs}, and explore {future_paths}."
+    },
+
+    "intelligence_layer": {
+      "user_stage_response": "Being in 10th, learning trades early is perfect for skill development.",
+      "user_interest_response": "Connect interests like mechanical, technical, or practical skills to jobs and specialties.",
+      "encouragement_style": "Motivating tone: 'Excellent start!', 'You’re on the right path!', 'Keep exploring!'."
+    }
+  },
+  {
+    "stage": "10th",
+    "name": "Armed Forces (Agniveer / NDA Foundation)",
+    "description": "Start preparation for defense careers through foundation courses or Agniveer scheme.",
+    "salary_range": "₹3-12 LPA",
+    "skills": ["Discipline", "Physical Fitness", "Leadership"],
+    "specialties": [
+      {"name": "Army Foundation"},
+      {"name": "Navy MR"},
+      {"name": "Air Force Y Group"}
+    ],
+    "future_paths": ["Join NDA after 12th", "Agniveer recruitment", "Police/Paramilitary exams"],
+    "jobs": ["Soldier", "Tradesman", "Sailor", "Officer Trainee"],
+    "mentors": [],
+    "lecture_platforms": ["NDA Coaching Centers", "Unacademy Defence", "Physics Wallah Defence"],
+    "example_queries": [
+      "How to join NDA after 10th?",
+      "Agniveer scheme eligibility"
+    ],
+    "tags": ["defence", "agniveer", "army", "navy", "air force", "after 10th"],
+
+    "mentor_templates": {
+      "discipline": "Interested in defense? {name} builds {skills} through {specialties} and sets you up for {future_paths}.",
+      "physical": "If fitness and leadership excite you, {name} is perfect at {stage} for preparing {jobs}.",
+      "general": "At {stage}, {name} offers discipline, training, and career options like {future_paths}."
+    },
+
+    "intelligence_layer": {
+      "user_stage_response": "Being in 10th, you can start foundational preparation for defense careers.",
+      "user_interest_response": "Link interests like physical fitness, discipline, or leadership to skills, jobs, or specialties.",
+      "encouragement_style": "Motivating tone: 'Strong start!', 'You can do this!', 'Onwards to success!'."
+    }
+  },
+  {
+    "stage": "10th",
+    "name": "Vocational Courses (Skill Development)",
+    "description": "Short-term skill-based courses in trades like fashion, beauty, hospitality, and computer applications.",
+    "salary_range": "₹2-6 LPA",
+    "skills": ["Creativity", "Communication", "Technical Skills"],
+    "specialties": [
+      {"name": "Beauty & Wellness"},
+      {"name": "Hospitality"},
+      {"name": "Computer Applications"}
+    ],
+    "future_paths": ["Open small business", "Work in hospitality", "Freelancing"],
+    "jobs": ["Beautician", "Hotel Staff", "Computer Operator"],
+    "mentors": [],
+    "lecture_platforms": ["NSDC", "Skill India Portal", "YouTube"],
+    "example_queries": [
+      "Vocational courses after 10th",
+      "Computer courses after 10th"
+    ],
+    "tags": ["vocational", "skill development", "hospitality", "beauty", "after 10th"],
+
+    "mentor_templates": {
+      "creative": "{name} helps you explore {specialties} and develop {skills}, opening opportunities like {future_paths}.",
+      "technical": "Short-term vocational courses like {name} prepare you for {jobs} and build {skills}.",
+      "general": "At {stage}, {name} is a smart choice to gain {skills}, work in {jobs}, and consider {future_paths}."
+    },
+
+    "intelligence_layer": {
+      "user_stage_response": "Being in 10th, skill-based courses are perfect for hands-on learning.",
+      "user_interest_response": "Tie creative or technical interests to skills, specialties, or future paths.",
+      "encouragement_style": "Encouraging tone: 'Great initiative!', 'Keep learning!', 'That’s inspiring!'."
+    }
+  },
+  {
+    "stage": "10th",
+    "name": "Creative Arts",
+    "description": "Students can pursue art, design, dance, or music through foundation courses.",
+    "salary_range": "₹2-10 LPA",
+    "skills": ["Creativity", "Imagination", "Performance"],
+    "specialties": [
+      {"name": "Fine Arts"},
+      {"name": "Dance"},
+      {"name": "Music"}
+    ],
+    "future_paths": ["Bachelor in Fine Arts", "Professional Artist", "Performing Arts Careers"],
+    "jobs": ["Artist", "Musician", "Choreographer", "Designer"],
+    "mentors": [],
+    "lecture_platforms": ["NIFT", "NID", "YouTube Arts Channels"],
+    "example_queries": [
+      "Arts courses after 10th",
+      "Career in music after 10th"
+    ],
+    "tags": ["arts", "music", "dance", "creative", "after 10th"],
+
+    "mentor_templates": {
+      "creative": "If you love arts, {name} develops {skills} through {specialties}, leading to {future_paths}.",
+      "performance": "{name} builds imagination and performance skills at {stage}, opening careers like {jobs}.",
+      "general": "At {stage}, {name} is ideal for creative growth, learning {skills}, and exploring {future_paths}."
+    },
+
+    "intelligence_layer": {
+      "user_stage_response": "Being in 10th, creative courses are excellent for skill and talent development.",
+      "user_interest_response": "Relate interests like arts, dance, or music to skills, specialties, and future paths.",
+      "encouragement_style": "Mentor-like tone: 'Amazing choice!', 'Keep pursuing your passion!', 'That’s inspiring!'."
+    }
+  },
+  {
+    "stage": "10th",
+    "name": "Healthcare Support (Paramedical)",
+    "description": "Certificate and diploma courses in paramedical fields prepare students for healthcare roles.",
+    "salary_range": "₹2-8 LPA",
+    "skills": ["Medical Knowledge", "Compassion", "Technical Skills"],
+    "specialties": [
+      {"name": "Lab Technician"},
+      {"name": "Nursing Assistant"},
+      {"name": "Radiology Technician"}
+    ],
+    "future_paths": ["Paramedical Diploma", "B.Sc Nursing", "Healthcare Administration"],
+    "jobs": ["Lab Technician", "Nursing Assistant", "Radiographer"],
+    "mentors": [],
+    "lecture_platforms": ["Coursera - Healthcare Courses", "Skill India Healthcare", "YouTube - Paramedical"],
+    "example_queries": [
+      "Paramedical courses after 10th",
+      "Healthcare diploma eligibility"
+    ],
+    "tags": ["healthcare", "paramedical", "after 10th", "medical support"],
+
+    "mentor_templates": {
+      "medical": "Interested in healthcare? {name} builds {skills} in {specialties} and prepares you for {future_paths}.",
+      "technical": "{name} offers hands-on skills for {jobs} while developing {skills}.",
+      "general": "At {stage}, {name} is a strong path to gain {skills} and work in {jobs}, with future options like {future_paths}."
+    },
+
+    "intelligence_layer": {
+      "user_stage_response": "Being in 10th, paramedical courses are a great start for healthcare careers.",
+      "user_interest_response": "Link interests like healthcare, medical support, or technical skills to specialties, jobs, or future paths.",
+      "encouragement_style": "Motivating tone: 'Excellent choice!', 'You’re on the right track!', 'Keep moving forward!'."
+    }
+  },
+  {
+    "stage": "UG",
+    "name": "Bachelor of Technology (B.Tech)",
+    "description": "Undergraduate engineering program focusing on technology and applied sciences.",
+    "salary_range": "₹4-15 LPA",
+    "skills": ["Mathematics", "Problem-Solving", "Programming"],
+    "specialties": [{"name": "Computer Science"}, {"name": "Mechanical"}, {"name": "Civil"}, {"name": "Electrical"}],
+    "future_paths": ["M.Tech", "MBA", "Research", "Corporate Engineering Roles"],
+    "jobs": ["Software Engineer", "Civil Engineer", "Mechanical Engineer"],
+    "lecture_platforms": ["NPTEL", "Coursera", "Udemy - B.Tech courses"],
+    "example_queries": ["How to get admission in B.Tech?", "Best branches in engineering"],
+    "tags": ["engineering", "btech", "technology", "computer science"],
+
+    "mentor_templates": {
+      "coding": "{name} at {stage} builds strong {skills} in areas like {specialties}, preparing you for {future_paths}.",
+      "mechanical": "Interested in engineering? {name} develops practical skills in {specialties} and readies you for {jobs}.",
+      "general": "At {stage}, {name} is a smart choice. Learn {skills}, work as {jobs}, and explore {future_paths}."
+    },
+
+    "intelligence_layer": {
+      "user_stage_response": "Being in UG, it’s the perfect time to specialize in engineering fields.",
+      "user_interest_response": "Connect interests like coding, mechanical, or problem-solving to skills, specialties, or career paths.",
+      "encouragement_style": "Mentor-like: 'Great step!', 'You’re on the right track!', 'Smart choice!'"
+    }
+  },
+  {
+    "stage": "UG",
+    "name": "MBBS (Bachelor of Medicine, Bachelor of Surgery)",
+    "description": "Professional undergraduate medical degree for aspiring doctors.",
+    "salary_range": "₹6-20 LPA",
+    "skills": ["Biology", "Critical Thinking", "Empathy", "Problem-Solving"],
+    "specialties": [{"name": "General Medicine"}, {"name": "Surgery"}, {"name": "Pediatrics"}, {"name": "Gynecology"}],
+    "future_paths": ["MD/MS", "Hospital Practice", "Research", "Government Services"],
+    "jobs": ["Doctor", "Surgeon", "Medical Officer"],
+    "lecture_platforms": ["AIIMS Online", "Marrow", "Coursera - Medicine"],
+    "example_queries": ["How to become a doctor after 12th?", "Best medical colleges in India"],
+    "tags": ["medicine", "mbbs", "doctor", "healthcare"],
+
+    "mentor_templates": {
+      "medical": "If healthcare excites you, {name} teaches {skills} through {specialties}, leading to {future_paths}.",
+      "research": "{name} at {stage} offers medical knowledge and practical skills preparing for {jobs} and research opportunities.",
+      "general": "At {stage}, {name} is a strong path to gain {skills}, work as {jobs}, and explore {future_paths}."
+    },
+
+    "intelligence_layer": {
+      "user_stage_response": "Being in UG, medical degrees are perfect for aspiring doctors.",
+      "user_interest_response": "Relate interests like biology, healthcare, or research to specialties, skills, and future paths.",
+      "encouragement_style": "Mentor tone: 'Excellent choice!', 'You’re on the right path!', 'Keep going!'"
+    }
+  },
+  {
+    "stage": "UG",
+    "name": "B.Sc (Bachelor of Science)",
+    "description": "Undergraduate degree focusing on sciences and research fields.",
+    "salary_range": "₹3-12 LPA",
+    "skills": ["Research", "Analytical Thinking", "Subject Knowledge"],
+    "specialties": [{"name": "Physics"}, {"name": "Chemistry"}, {"name": "Mathematics"}, {"name": "Biotechnology"}],
+    "future_paths": ["M.Sc", "Research", "Teaching", "Corporate Science Jobs"],
+    "jobs": ["Scientist", "Research Assistant", "Teacher"],
+    "lecture_platforms": ["NPTEL", "Byju's", "Coursera - Science Courses"],
+    "example_queries": ["What careers after B.Sc?", "Best B.Sc courses in India"],
+    "tags": ["science", "bsc", "research", "mathematics"],
+
+    "mentor_templates": {
+      "research": "{name} develops {skills} in {specialties}, preparing you for {future_paths}.",
+      "science": "If science excites you, {name} builds analytical skills at {stage} for {jobs} and research roles.",
+      "general": "At {stage}, {name} is a smart choice to gain {skills}, work as {jobs}, and explore {future_paths}."
+    },
+
+    "intelligence_layer": {
+      "user_stage_response": "Being in UG, science degrees are perfect for research and analytical careers.",
+      "user_interest_response": "Link interests like science, research, or analytical thinking to skills, specialties, and jobs.",
+      "encouragement_style": "Mentor tone: 'Great decision!', 'Keep exploring science!', 'Smart choice!'"
+    }
+  },
+  {
+    "stage": "UG",
+    "name": "B.Com (Bachelor of Commerce)",
+    "description": "Undergraduate program in commerce, business, and finance.",
+    "salary_range": "₹3-10 LPA",
+    "skills": ["Accounting", "Finance", "Economics", "Business Analysis"],
+    "specialties": [{"name": "Accounting"}, {"name": "Finance"}, {"name": "Banking"}],
+    "future_paths": ["CA", "MBA", "M.Com", "Corporate Finance Jobs"],
+    "jobs": ["Accountant", "Financial Analyst", "Bank Officer"],
+    "lecture_platforms": ["ICAI", "Coursera - Commerce", "Udemy - Accounting"],
+    "example_queries": ["What can I do after B.Com?", "Best jobs after B.Com"],
+    "tags": ["commerce", "bcom", "accounting", "finance"],
+
+    "mentor_templates": {
+      "business": "{name} develops {skills} in {specialties}, opening doors to {future_paths}.",
+      "finance": "If finance excites you, {name} prepares you for roles like {jobs} and future options like {future_paths}.",
+      "general": "At {stage}, {name} is ideal to learn {skills}, work as {jobs}, and explore {future_paths}."
+    },
+
+    "intelligence_layer": {
+      "user_stage_response": "Being in UG, commerce degrees are great for business and finance careers.",
+      "user_interest_response": "Tie interests like business, accounting, or finance to skills, jobs, and future paths.",
+      "encouragement_style": "Mentor tone: 'Great step!', 'Keep learning!', 'Smart move!'"
+    }
+  },
+  {
+    "stage": "UG",
+    "name": "BA (Bachelor of Arts)",
+    "description": "Undergraduate program in humanities and social sciences.",
+    "salary_range": "₹2-8 LPA",
+    "skills": ["Critical Thinking", "Communication", "Creativity"],
+    "specialties": [{"name": "Political Science"}, {"name": "History"}, {"name": "Psychology"}, {"name": "English Literature"}],
+    "future_paths": ["MA", "UPSC", "Teaching", "Journalism"],
+    "jobs": ["Writer", "Journalist", "Teacher", "Civil Services"],
+    "lecture_platforms": ["Coursera", "edX", "NPTEL - Arts"],
+    "example_queries": ["Best BA courses in India", "Careers after BA"],
+    "tags": ["arts", "ba", "humanities", "psychology", "history"],
+
+    "mentor_templates": {
+      "arts": "{name} builds {skills} in {specialties}, paving the way to {future_paths}.",
+      "communication": "If humanities excite you, {name} strengthens communication and critical thinking for {jobs}.",
+      "general": "At {stage}, {name} is a good choice to develop {skills} and explore careers like {future_paths}."
+    },
+
+    "intelligence_layer": {
+      "user_stage_response": "Being in UG, arts degrees are ideal for developing creativity and critical thinking.",
+      "user_interest_response": "Relate interests like humanities, psychology, or arts to skills, jobs, and future paths.",
+      "encouragement_style": "Mentor tone: 'Excellent choice!', 'Keep growing!', 'Smart move!'"
+    }
+  },
+  {
+    "stage": "UG",
+    "name": "BBA (Bachelor of Business Administration)",
+    "description": "Undergraduate business management degree preparing for corporate careers.",
+    "salary_range": "₹3-12 LPA",
+    "skills": ["Leadership", "Management", "Marketing", "Finance"],
+    "specialties": [{"name": "Marketing"}, {"name": "Finance"}, {"name": "Human Resources"}],
+    "future_paths": ["MBA", "Corporate Jobs", "Entrepreneurship"],
+    "jobs": ["Business Analyst", "Marketing Executive", "HR Officer"],
+    "lecture_platforms": ["Coursera - Business", "Udemy - BBA Basics"],
+    "example_queries": ["Is BBA good after 12th?", "BBA vs B.Com"],
+    "tags": ["bba", "business", "management", "marketing"],
+
+    "mentor_templates": {
+      "business": "{name} builds {skills} in {specialties}, preparing you for {future_paths}.",
+      "leadership": "If you’re into management, {name} strengthens leadership skills for roles like {jobs}.",
+      "general": "At {stage}, {name} is great for learning {skills}, exploring {jobs}, and planning {future_paths}."
+    },
+
+    "intelligence_layer": {
+      "user_stage_response": "Being in UG, business degrees are perfect for corporate or entrepreneurial careers.",
+      "user_interest_response": "Link interests like leadership, management, or finance to skills, specialties, and jobs.",
+      "encouragement_style": "Mentor tone: 'Great initiative!', 'You’re on the right track!', 'Keep going!'"
+    }
+  },
+  {
+    "stage": "UG",
+    "name": "B.Arch (Bachelor of Architecture)",
+    "description": "Professional undergraduate program in architecture and design.",
+    "salary_range": "₹4-15 LPA",
+    "skills": ["Design", "Creativity", "CAD Tools", "Visualization"],
+    "specialties": [{"name": "Urban Design"}, {"name": "Interior Design"}, {"name": "Landscape Architecture"}],
+    "future_paths": ["M.Arch", "Urban Planning", "Design Consultancy"],
+    "jobs": ["Architect", "Urban Designer", "Interior Designer"],
+    "lecture_platforms": ["NATA Resources", "Coursera - Architecture"],
+    "example_queries": ["How to become an architect?", "Best colleges for B.Arch"],
+    "tags": ["architecture", "barch", "design", "urban planning"],
+
+    "mentor_templates": {
+      "design": "{name} develops {skills} in {specialties}, leading to {future_paths}.",
+      "creative": "If architecture excites you, {name} at {stage} prepares you for {jobs} and design roles.",
+      "general": "At {stage}, {name} is excellent for creative growth, learning {skills}, and exploring {future_paths}."
+    },
+
+    "intelligence_layer": {
+      "user_stage_response": "Being in UG, architecture degrees are perfect for design and planning careers.",
+      "user_interest_response": "Relate interests like architecture, design, or creativity to skills, specialties, and jobs.",
+      "encouragement_style": "Mentor tone: 'Amazing choice!', 'Keep designing!', 'Smart move!'"
+    }
+  },
+  {
+    "stage": "UG",
+    "name": "B.Des (Bachelor of Design)",
+    "description": "Creative undergraduate program for design and innovation.",
+    "salary_range": "₹3-12 LPA",
+    "skills": ["Creativity", "Sketching", "Digital Tools"],
+    "specialties": [{"name": "Fashion Design"}, {"name": "Graphic Design"}, {"name": "UI/UX"}],
+    "future_paths": ["M.Des", "Freelancing", "Fashion Industry", "IT Industry"],
+    "jobs": ["Fashion Designer", "UI/UX Designer", "Product Designer"],
+    "lecture_platforms": ["NID Resources", "Udemy - Design Courses"],
+    "example_queries": ["Is design a good career?", "Best B.Des programs"],
+    "tags": ["design", "bdes", "fashion", "ux", "graphic"],
+
+    "mentor_templates": {
+      "creative": "{name} builds {skills} in {specialties}, leading to {future_paths}.",
+      "digital": "If design excites you, {name} teaches digital and creative skills for {jobs}.",
+      "general": "At {stage}, {name} is ideal for creative growth, learning {skills}, and exploring {future_paths}."
+    },
+
+    "intelligence_layer": {
+      "user_stage_response": "Being in UG, design degrees are perfect for creative and digital careers.",
+      "user_interest_response": "Tie interests like fashion, graphics, or UI/UX to skills, specialties, and jobs.",
+      "encouragement_style": "Mentor tone: 'Excellent choice!', 'Keep innovating!', 'That’s inspiring!'"
+    }
+  },
+  {
+    "stage": "UG",
+    "name": "B.Pharm (Bachelor of Pharmacy)",
+    "description": "Undergraduate degree for careers in pharmacy and healthcare.",
+    "salary_range": "₹3-10 LPA",
+    "skills": ["Chemistry", "Healthcare", "Research", "Pharmacology"],
+    "specialties": [{"name": "Clinical Pharmacy"}, {"name": "Pharmaceutical Research"}, {"name": "Industrial Pharmacy"}],
+    "future_paths": ["M.Pharm", "Research", "Pharmaceutical Companies"],
+    "jobs": ["Pharmacist", "Drug Researcher", "Medical Sales Rep"],
+    "lecture_platforms": ["Pharmacy Council", "Coursera - Pharmacy"],
+    "example_queries": ["What after B.Pharm?", "Scope of pharmacy in India"],
+    "tags": ["pharmacy", "bpharm", "medicine", "research"],
+
+    "mentor_templates": {
+      "medical": "{name} develops {skills} in {specialties}, preparing you for {future_paths}.",
+      "research": "If healthcare excites you, {name} builds technical and analytical skills for {jobs}.",
+      "general": "At {stage}, {name} is strong for gaining {skills}, exploring {jobs}, and considering {future_paths}."
+    },
+
+    "intelligence_layer": {
+      "user_stage_response": "Being in UG, pharmacy degrees are excellent for healthcare and research careers.",
+      "user_interest_response": "Connect interests like healthcare, research, or pharmacology to skills, specialties, and jobs.",
+      "encouragement_style": "Mentor tone: 'Great initiative!', 'You’re on the right track!', 'Keep learning!'"
+    }
+  },
+  {
+    "stage": "UG",
+    "name": "BDS (Bachelor of Dental Surgery)",
+    "description": "Professional undergraduate dental degree.",
+    "salary_range": "₹4-12 LPA",
+    "skills": ["Dental Science", "Surgery", "Patience", "Communication"],
+    "specialties": [{"name": "Orthodontics"}, {"name": "Prosthodontics"}, {"name": "Oral Surgery"}],
+    "future_paths": ["MDS", "Private Practice", "Research"],
+    "jobs": ["Dentist", "Dental Surgeon"],
+    "lecture_platforms": ["Dental Council of India", "Coursera - Dentistry"],
+    "example_queries": ["How to become a dentist?", "BDS vs MBBS"],
+    "tags": ["bds", "dentistry", "oral health", "dental"],
+
+    "mentor_templates": {
+      "medical": "{name} builds {skills} in {specialties}, preparing you for {future_paths}.",
+      "surgery": "If dentistry excites you, {name} develops surgical and communication skills for {jobs}.",
+      "general": "At {stage}, {name} is ideal for gaining {skills}, exploring {jobs}, and considering {future_paths}."
+    },
+
+    "intelligence_layer": {
+      "user_stage_response": "Being in UG, dental degrees are perfect for medical and healthcare careers.",
+      "user_interest_response": "Relate interests like dental science, surgery, or healthcare to skills, specialties, and jobs.",
+      "encouragement_style": "Mentor tone: 'Excellent choice!', 'Keep learning!', 'That’s inspiring!'"
+    }
+  },
+  {
+    "stage": "PG",
+    "name": "MBA (Master of Business Administration)",
+    "description": "Postgraduate program in management and business leadership.",
+    "salary_range": "₹8-30 LPA",
+    "skills": ["Leadership", "Finance", "Marketing", "Strategy"],
+    "specialties": [{"name": "Marketing"}, {"name": "Finance"}, {"name": "Human Resources"}, {"name": "Operations"}],
+    "future_paths": ["Corporate Leadership", "Entrepreneurship", "Consulting"],
+    "jobs": ["Manager", "Business Analyst", "HR Manager", "Entrepreneur"],
+    "lecture_platforms": ["IIM Learning", "Coursera MBA", "Harvard Online"],
+    "example_queries": ["Why do an MBA?", "Best MBA colleges in India"],
+    "tags": ["mba", "business", "leadership", "finance", "marketing"],
+
+    "mentor_templates": {
+      "business": "{name} develops {skills} in {specialties}, preparing you for {future_paths}.",
+      "leadership": "At {stage}, {name} strengthens leadership and strategic thinking for roles like {jobs}.",
+      "general": "Pursuing {name} at {stage} equips you with {skills} for {jobs} and future paths like {future_paths}."
+    },
+
+    "intelligence_layer": {
+      "user_stage_response": "Being in PG, MBA is ideal for leadership and corporate careers.",
+      "user_interest_response": "Relate interests like business strategy, finance, or entrepreneurship to skills, specialties, and jobs.",
+      "encouragement_style": "Mentor tone: 'Excellent choice!', 'You’re taking a strong step!', 'Keep going!'"
+    }
+  },
+  {
+    "stage": "PG",
+    "name": "M.Tech (Master of Technology)",
+    "description": "Specialized postgraduate degree in engineering and technology.",
+    "salary_range": "₹6-20 LPA",
+    "skills": ["Research", "Programming", "Problem-Solving"],
+    "specialties": [{"name": "Computer Science"}, {"name": "Electrical"}, {"name": "Civil"}, {"name": "Mechanical"}],
+    "future_paths": ["PhD", "Research", "Corporate R&D"],
+    "jobs": ["Senior Engineer", "Research Scientist", "Professor"],
+    "lecture_platforms": ["NPTEL", "IIT Online", "Coursera - Engineering"],
+    "example_queries": ["What is the scope of M.Tech?", "Is M.Tech better than MBA?"],
+    "tags": ["mtech", "engineering", "research", "technology"],
+
+    "mentor_templates": {
+      "engineering": "{name} at {stage} hones {skills} in {specialties}, opening doors to {future_paths}.",
+      "research": "If research excites you, {name} builds technical expertise for roles like {jobs}.",
+      "general": "At {stage}, {name} develops {skills} for {jobs} and future paths like {future_paths}."
+    },
+
+    "intelligence_layer": {
+      "user_stage_response": "Being in PG, M.Tech is perfect for specialization in engineering and research.",
+      "user_interest_response": "Link interests like technology, programming, or problem-solving to specialties, skills, and jobs.",
+      "encouragement_style": "Mentor tone: 'Great initiative!', 'You’re on the right track!', 'Keep going!'"
+    }
+  },
+  {
+    "stage": "PG",
+    "name": "M.Sc (Master of Science)",
+    "description": "Postgraduate program focusing on scientific and research skills.",
+    "salary_range": "₹4-12 LPA",
+    "skills": ["Research", "Lab Work", "Analytical Thinking"],
+    "specialties": [{"name": "Physics"}, {"name": "Chemistry"}, {"name": "Mathematics"}, {"name": "Biotechnology"}],
+    "future_paths": ["PhD", "Research", "Teaching", "Corporate Science Jobs"],
+    "jobs": ["Scientist", "Lab Technician", "Professor"],
+    "lecture_platforms": ["NPTEL", "edX - Science", "Coursera"],
+    "example_queries": ["Careers after M.Sc", "Best M.Sc specializations"],
+    "tags": ["msc", "science", "research", "biology", "mathematics"],
+
+    "mentor_templates": {
+      "research": "{name} enhances {skills} in {specialties}, preparing you for {future_paths}.",
+      "science": "At {stage}, {name} develops analytical skills and lab expertise for roles like {jobs}.",
+      "general": "Pursuing {name} at {stage} equips you with {skills} for {jobs} and future paths like {future_paths}."
+    },
+
+    "intelligence_layer": {
+      "user_stage_response": "Being in PG, M.Sc is ideal for research, teaching, and analytical careers.",
+      "user_interest_response": "Connect interests like science, lab work, or research to skills, specialties, and jobs.",
+      "encouragement_style": "Mentor tone: 'Excellent choice!', 'Keep learning!', 'Great step!'"
+    }
+  },
+  {
+    "stage": "PG",
+    "name": "LLM (Master of Laws)",
+    "description": "Postgraduate law program for specialization in legal studies.",
+    "salary_range": "₹5-18 LPA",
+    "skills": ["Legal Research", "Critical Thinking", "Public Speaking"],
+    "specialties": [{"name": "Corporate Law"}, {"name": "Criminal Law"}, {"name": "International Law"}],
+    "future_paths": ["PhD in Law", "Legal Academia", "Senior Lawyer"],
+    "jobs": ["Lawyer", "Judge", "Legal Advisor"],
+    "lecture_platforms": ["Coursera - Law", "edX - Legal Studies", "NLSIU"],
+    "example_queries": ["Scope of LLM in India", "Best fields in law"],
+    "tags": ["law", "llm", "legal", "advocate"],
+
+    "mentor_templates": {
+      "law": "{name} develops {skills} in {specialties}, preparing you for {future_paths}.",
+      "advocacy": "If law excites you, {name} builds critical thinking and public speaking for roles like {jobs}.",
+      "general": "At {stage}, {name} equips you with {skills} for {jobs} and future paths like {future_paths}."
+    },
+
+    "intelligence_layer": {
+      "user_stage_response": "Being in PG, LLM is perfect for legal specialization and academia.",
+      "user_interest_response": "Link interests like law, research, or advocacy to skills, specialties, and jobs.",
+      "encouragement_style": "Mentor tone: 'Great choice!', 'You’re on the right path!', 'Keep going!'"
+    }
+  },
+  {
+    "stage": "PG",
+    "name": "MCA (Master of Computer Applications)",
+    "description": "Postgraduate degree focusing on computer science, software, and IT.",
+    "salary_range": "₹6-18 LPA",
+    "skills": ["Programming", "Database Management", "Software Development"],
+    "specialties": [{"name": "Software Development"}, {"name": "Data Science"}, {"name": "Cybersecurity"}, {"name": "AI/ML"}],
+    "future_paths": ["Software Architect", "Data Scientist", "IT Manager"],
+    "jobs": ["Software Engineer", "Data Scientist", "System Analyst"],
+    "lecture_platforms": ["Coursera - MCA", "edX - Computer Science", "Udemy"],
+    "example_queries": ["What is the scope of MCA?", "Best jobs after MCA"],
+    "tags": ["mca", "computer applications", "it", "software", "data science"],
+
+    "mentor_templates": {
+      "tech": "{name} develops {skills} in {specialties}, preparing you for {future_paths}.",
+      "programming": "If IT excites you, {name} builds software and analytical skills for roles like {jobs}.",
+      "general": "At {stage}, {name} equips you with {skills} for {jobs} and future paths like {future_paths}."
+    },
+
+    "intelligence_layer": {
+      "user_stage_response": "Being in PG, MCA is ideal for IT, software, and data careers.",
+      "user_interest_response": "Relate interests like programming, AI, or data science to skills, specialties, and jobs.",
+      "encouragement_style": "Mentor tone: 'Excellent choice!', 'You’re on the right track!', 'Keep progressing!'"
+    }
+  },
+  {
+    "stage": "PG",
+    "name": "MDS (Master of Dental Surgery)",
+    "description": "Advanced postgraduate program in dentistry specialization.",
+    "salary_range": "₹6-20 LPA",
+    "skills": ["Dental Surgery", "Orthodontics", "Patient Care"],
+    "specialties": [{"name": "Oral Surgery"}, {"name": "Orthodontics"}, {"name": "Prosthodontics"}],
+    "future_paths": ["Private Dental Practice", "Research", "Senior Dental Surgeon"],
+    "jobs": ["Dental Surgeon", "Orthodontist"],
+    "lecture_platforms": ["Dental Council of India", "Coursera - Dentistry"],
+    "example_queries": ["Scope of MDS in India", "Best dental specialization"],
+    "tags": ["dentistry", "mds", "oral surgery", "orthodontics"],
+
+    "mentor_templates": {
+      "medical": "{name} develops {skills} in {specialties}, preparing you for {future_paths}.",
+      "surgery": "If dentistry excites you, {name} builds surgical and patient care skills for roles like {jobs}.",
+      "general": "At {stage}, {name} equips you with {skills} for {jobs} and future paths like {future_paths}."
+    },
+
+    "intelligence_layer": {
+      "user_stage_response": "Being in PG, MDS is ideal for dental specialization and private practice.",
+      "user_interest_response": "Link interests like dentistry, surgery, or orthodontics to skills, specialties, and jobs.",
+      "encouragement_style": "Mentor tone: 'Great choice!', 'Keep progressing!', 'You’re on the right path!'"
+    }
+  },
+  {
+    "stage": "PG",
+    "name": "AI Prompt Engineer",
+    "description": "Designs prompts and workflows for AI systems to improve accuracy and creativity.",
+    "salary_range": "₹12-35 LPA",
+    "skills": ["AI Knowledge", "Creative Writing", "Data Analysis", "Problem Solving"],
+    "specialties": [{"name": "Chatbot Design"}, {"name": "Creative Prompts"}, {"name": "AI Automation"}],
+    "future_paths": ["AI Research", "Product Design", "Startup Founder"],
+    "jobs": ["AI Prompt Engineer", "AI Trainer", "AI Strategist"],
+    "lecture_platforms": ["OpenAI Docs", "Coursera - AI for Everyone", "Udemy - Prompt Engineering"],
+    "example_queries": ["What is a prompt engineer?", "How to get into AI prompt engineering?"],
+    "tags": ["ai", "prompt engineering", "chatbot", "machine learning"],
+
+    "mentor_templates": {
+      "ai": "{name} hones {skills} in {specialties}, preparing for {future_paths}.",
+      "creative": "If AI excites you, {name} builds analytical and creative skills for roles like {jobs}.",
+      "general": "At {stage}, {name} equips you with {skills} for {jobs} and future paths like {future_paths}."
+    },
+
+    "intelligence_layer": {
+      "user_stage_response": "Being in PG, AI Prompt Engineering is perfect for cutting-edge tech careers.",
+      "user_interest_response": "Link interests like AI, creativity, or data analysis to skills, specialties, and jobs.",
+      "encouragement_style": "Mentor tone: 'Excellent choice!', 'Keep innovating!', 'You’re on the right path!'"
+    }
+  },
+  {
+    "stage": "PG",
+    "name": "Metaverse Architect",
+    "description": "Designs 3D virtual worlds and environments in the metaverse for gaming, work, or education.",
+    "salary_range": "₹10-28 LPA",
+    "skills": ["3D Design", "VR/AR", "Game Engines", "Creativity"],
+    "specialties": [{"name": "Virtual Worlds"}, {"name": "NFT Spaces"}, {"name": "VR Education"}],
+    "future_paths": ["AR/VR Startups", "Game Design", "Virtual Consulting"],
+    "jobs": ["Metaverse Architect", "VR Designer", "3D Artist"],
+    "lecture_platforms": ["Unity Learn", "Unreal Engine Academy", "Coursera - VR/AR"],
+    "example_queries": ["How to become a metaverse architect?", "Is metaverse design a career?"],
+    "tags": ["metaverse", "vr", "ar", "3d design", "nft"],
+
+    "mentor_templates": {
+      "design": "{name} develops {skills} in {specialties}, leading to {future_paths}.",
+      "creative": "If virtual worlds excite you, {name} builds immersive design skills for roles like {jobs}.",
+      "general": "At {stage}, {name} equips you with {skills} for {jobs} and future paths like {future_paths}."
+    },
+
+    "intelligence_layer": {
+      "user_stage_response": "Being in PG, Metaverse Architecture is ideal for 3D and immersive tech careers.",
+      "user_interest_response": "Relate interests like VR, AR, or 3D design to skills, specialties, and jobs.",
+      "encouragement_style": "Mentor tone: 'Amazing choice!', 'Keep creating!', 'You’re on the cutting edge!'"
+    }
+  },
+  {
+    "stage": "UG",
+    "name": "Esports Athlete",
+    "description": "Professional gamer competing in tournaments for prize money, sponsorships, and global recognition.",
+    "salary_range": "₹3-15 LPA (can exceed with sponsorships)",
+    "skills": ["Gaming Strategy", "Reflexes", "Teamwork", "Streaming"],
+    "specialties": [{"name": "FPS Games"}, {"name": "MOBA Games"}, {"name": "Battle Royale"}],
+    "future_paths": ["Content Creator", "Game Coach", "Team Manager", "Brand Ambassador"],
+    "jobs": ["Professional Gamer", "Game Streamer", "Coach"],
+    "lecture_platforms": ["Twitch", "YouTube Gaming", "Udemy - Game Strategy"],
+    "example_queries": ["How to become a professional gamer?", "Career in esports after 12th"],
+    "tags": ["gaming", "esports", "streaming", "pro gamer"],
+
+    "mentor_templates": {
+      "gaming": "{name} builds {skills} in {specialties}, preparing you for {future_paths}.",
+      "content_creation": "At {stage}, {name} helps you develop streaming, teamwork, and gaming expertise for roles like {jobs}.",
+      "general": "Pursuing {name} at {stage} equips you with {skills} for {jobs} and future options like {future_paths}."
+    },
+
+    "intelligence_layer": {
+      "user_stage_response": "Being in UG, esports is a dynamic path combining skill and strategy.",
+      "user_interest_response": "Connect interests like gaming, teamwork, or streaming to skills, specialties, and jobs.",
+      "encouragement_style": "Mentor tone: 'Amazing choice!', 'You have great potential!', 'Keep competing!'"
+    }
+  },
+  {
+    "stage": "UG",
+    "name": "YouTuber / Digital Content Creator",
+    "description": "Creates content on YouTube or other platforms for entertainment, education, or information.",
+    "salary_range": "₹2 LPA to crores (depending on audience reach)",
+    "skills": ["Video Editing", "Storytelling", "Marketing", "Creativity"],
+    "specialties": [{"name": "Education"}, {"name": "Comedy"}, {"name": "Gaming"}, {"name": "Lifestyle"}],
+    "future_paths": ["Influencer", "Media Entrepreneur", "Brand Collaborator"],
+    "jobs": ["YouTuber", "Influencer", "Educator"],
+    "lecture_platforms": ["YouTube Creator Academy", "Skillshare - Video Editing", "Coursera - Digital Marketing"],
+    "example_queries": ["How to start a YouTube channel?", "Can YouTube be a career in India?"],
+    "tags": ["youtube", "content creation", "digital marketing", "influencer"],
+
+    "mentor_templates": {
+      "content_creation": "{name} develops {skills} in {specialties}, guiding you toward {future_paths}.",
+      "media": "At {stage}, {name} builds storytelling, editing, and marketing skills for roles like {jobs}.",
+      "general": "Pursuing {name} at {stage} equips you with {skills} for {jobs} and future options like {future_paths}."
+    },
+
+    "intelligence_layer": {
+      "user_stage_response": "Being in UG, digital content creation is a creative and entrepreneurial path.",
+      "user_interest_response": "Relate interests like video, storytelling, or media to skills, specialties, and jobs.",
+      "encouragement_style": "Mentor tone: 'Inspiring choice!', 'You’re on a creative path!', 'Keep producing content!'"
+    }
+  },
+  {
+    "stage": "UG",
+    "name": "Space Tourism Guide",
+    "description": "Trains and assists tourists in space travel experiences offered by private companies.",
+    "salary_range": "₹15-40 LPA",
+    "skills": ["Astronomy", "Physical Fitness", "Communication", "Safety Training"],
+    "specialties": [{"name": "Zero Gravity Training"}, {"name": "Astronomy Tours"}, {"name": "Space Safety"}],
+    "future_paths": ["Space Exploration Careers", "Training Specialist", "Aerospace Roles"],
+    "jobs": ["Space Tour Guide", "Astronaut Trainer", "Space Educator"],
+    "lecture_platforms": ["NASA Online Courses", "SpaceX Training Programs"],
+    "example_queries": ["How to work in space tourism?", "Space jobs for students"],
+    "tags": ["space", "tourism", "astronomy", "future careers"],
+
+    "mentor_templates": {
+      "space": "{name} develops {skills} in {specialties}, preparing you for {future_paths}.",
+      "science": "At {stage}, {name} builds expertise in astronomy and safety training for roles like {jobs}.",
+      "general": "Pursuing {name} at {stage} equips you with {skills} for {jobs} and future options like {future_paths}."
+    },
+
+    "intelligence_layer": {
+      "user_stage_response": "Being in UG, space tourism is an exciting futuristic career path.",
+      "user_interest_response": "Link interests like astronomy, adventure, or training to skills, specialties, and jobs.",
+      "encouragement_style": "Mentor tone: 'Wow, what an exciting choice!', 'You’re exploring the future!', 'Keep aiming high!'"
+    }
+  },
+  {
+    "stage": "UG",
+    "name": "Sustainability Consultant",
+    "description": "Advises companies and governments on eco-friendly, sustainable solutions.",
+    "salary_range": "₹6-18 LPA",
+    "skills": ["Environmental Science", "Policy Knowledge", "Research", "Communication"],
+    "specialties": [{"name": "Climate Change"}, {"name": "Renewable Energy"}, {"name": "Waste Management"}],
+    "future_paths": ["Environmental Policy Advisor", "Green Entrepreneur"],
+    "jobs": ["Sustainability Consultant", "Policy Advisor", "Environmental Engineer"],
+    "lecture_platforms": ["edX - Sustainability", "NPTEL - Environmental Studies", "Coursera - Renewable Energy"],
+    "example_queries": ["What is sustainability consulting?", "Green careers after graduation"],
+    "tags": ["sustainability", "environment", "climate change", "green jobs"],
+
+    "mentor_templates": {
+      "environment": "{name} develops {skills} in {specialties}, preparing you for {future_paths}.",
+      "consulting": "At {stage}, {name} builds sustainability and policy expertise for roles like {jobs}.",
+      "general": "Pursuing {name} at {stage} equips you with {skills} for {jobs} and future options like {future_paths}."
+    },
+
+    "intelligence_layer": {
+      "user_stage_response": "Being in UG, sustainability consulting is ideal for eco-friendly and research-oriented careers.",
+      "user_interest_response": "Link interests like environment, policy, or green solutions to skills, specialties, and jobs.",
+      "encouragement_style": "Mentor tone: 'Excellent choice!', 'You’re shaping the future!', 'Keep going green!'"
+    }
+  },
+  {
+    "stage": "UG",
+    "name": "Food Technologist (Future Foods)",
+    "description": "Develops plant-based, lab-grown, or alternative sustainable food products.",
+    "salary_range": "₹5-15 LPA",
+    "skills": ["Biotechnology", "Food Science", "Research", "Sustainability"],
+    "specialties": [{"name": "Plant-Based Foods"}, {"name": "Lab-Grown Meat"}, {"name": "Food Safety"}],
+    "future_paths": ["Food Startups", "Research", "Government Roles"],
+    "jobs": ["Food Technologist", "Quality Analyst", "Food Scientist"],
+    "lecture_platforms": ["Coursera - Food Science", "edX - Future of Food"],
+    "example_queries": ["Careers in food technology", "Lab grown meat in India"],
+    "tags": ["food technology", "biotech", "sustainable food", "future foods"],
+
+    "mentor_templates": {
+      "biotech": "{name} develops {skills} in {specialties}, preparing you for {future_paths}.",
+      "food_science": "At {stage}, {name} builds research and innovation skills for roles like {jobs}.",
+      "general": "Pursuing {name} at {stage} equips you with {skills} for {jobs} and future options like {future_paths}."
+    },
+
+    "intelligence_layer": {
+      "user_stage_response": "Being in UG, food technology is a forward-looking career blending science and sustainability.",
+      "user_interest_response": "Connect interests like biotechnology, research, or sustainable foods to skills, specialties, and jobs.",
+      "encouragement_style": "Mentor tone: 'Fantastic choice!', 'You’re innovating for the future!', 'Keep exploring!'"
+    }
+  }
+
+]
