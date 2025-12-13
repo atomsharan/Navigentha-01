@@ -170,7 +170,7 @@ REST_FRAMEWORK = {
 CSRF_TRUSTED_ORIGINS = ["http://localhost:5173","http://localhost:5175","http://127.0.0.1:5173","http://127.0.0.1:5175"]
 
 # Gemini API Configuration
-GEMINI_API_KEY = "AIzaSyBmUjU6Hnje5zizmEFwJbhQ4EtBsVUMLC4"
+GEMINI_API_KEY = "AIzaSyCJmGdY86yqLANJoBizgo65xEWiX55xDz8"
 
 # OpenAI API Configuration (for GPT integration)
 # Get your API key from: https://platform.openai.com/api-keys

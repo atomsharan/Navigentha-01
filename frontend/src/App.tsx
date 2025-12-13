@@ -11,20 +11,12 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import Navigation from "@/components/Navigation";
 import CareerNavigation from "@/components/career/CareerNavigation";
-import MentalNavigation from "@/components/mental/MentalNavigation";
-
 // Career Pages
 import CareerDashboard from "@/pages/career/CareerDashboard";
 import CareerRoadmap from "@/pages/career/CareerRoadmap";
 import SkillBuilder from "@/pages/career/SkillBuilder";
 import JobsInternships from "@/pages/career/JobsInternships";
 import MentorsCommunity from "@/pages/career/MentorsCommunity";
-
-// Mental Health Pages
-import MentalDashboard from "@/pages/mental/MentalDashboard";
-import MoodHistory from "@/pages/mental/MoodHistory";
-import WellnessResources from "@/pages/mental/WellnessResources";
-import EmergencySupport from "@/pages/mental/EmergencySupport";
 
 import NotFound from "./pages/NotFound";
 import Index from "./pages/Index";
@@ -48,19 +40,6 @@ const CareerLayout = () => (
   </div>
 );
 
-const MentalLayout = () => (
-  <div className="min-h-screen bg-background">
-    <Navigation />
-    <MentalNavigation />
-    <Routes>
-      <Route path="/" element={<MentalDashboard />} />
-      <Route path="/mood-history" element={<MoodHistory />} />
-      <Route path="/resources" element={<WellnessResources />} />
-      <Route path="/emergency" element={<EmergencySupport />} />
-    </Routes>
-  </div>
-);
-
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <ThemeProvider>
@@ -79,7 +58,6 @@ const App = () => (
                 <Route path="/register" element={<Register />} />
                 <Route path="/career/*" element={<CareerLayout />} />
                 <Route path="/chatbot" element={<ChatbotPage />} />
-                <Route path="/mental/*" element={<MentalLayout />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
                 </BrowserRouter>

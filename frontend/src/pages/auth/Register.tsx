@@ -113,8 +113,10 @@ const Register = () => {
 
     try {
       await api.post('/api/auth/register/', {
-        username: formData.email,
+        email: formData.email,
         password: formData.password,
+        first_name: formData.firstName,
+        last_name: formData.lastName,
       });
 
       const tokenResp = await api.post('/api/token/', {
@@ -128,7 +130,7 @@ const Register = () => {
 
       toast({
         title: "Account Created!",
-        description: "Welcome to NEXORA! Your career journey starts now.",
+        description: "Welcome to Navigentha! Your career journey starts now.",
       });
 
       navigate("/career");
@@ -162,7 +164,7 @@ const Register = () => {
             </Link>
             <div className="flex items-center justify-center gap-2 mb-4">
               <Brain className="h-8 w-8 text-primary" />
-              <h1 className="text-2xl font-bold text-foreground">NEXORA</h1>
+              <h1 className="text-2xl font-bold text-foreground">Navigentha</h1>
             </div>
             <p className="text-muted-foreground">Create your account to start your career journey</p>
           </div>

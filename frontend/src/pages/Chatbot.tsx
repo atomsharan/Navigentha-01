@@ -30,6 +30,7 @@ const ChatbotPage = () => {
   const [inputValue, setInputValue] = useState('');
   const [chatHistory, setChatHistory] = useState<ChatHistoryItem[]>([]);
   const [activeChatId, setActiveChatId] = useState('current');
+  const [isLoadingHistory, setIsLoadingHistory] = useState(false);
   const messagesEndRef = useRef<null | HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -37,6 +38,56 @@ const ChatbotPage = () => {
   };
 
   useEffect(scrollToBottom, [messages]);
+
+  // Load chat history on mount
+  useEffect(() => {
+    const loadChatHistory = async () => {
+      try {
+        setIsLoadingHistory(true);
+        const { data } = await api.get('/api/chat/history/');
+        if (data && Array.isArray(data)) {
+          const historyItems: ChatHistoryItem[] = data.map((convo: any) => ({
+            id: convo.conversation_id || convo.id,
+            title: convo.last_user_message ? generateChatTitle(convo.last_user_message) : 'New Chat',
+            lastMessage: convo.last_user_message || (convo.messages && convo.messages.length > 0 ? convo.messages[convo.messages.length - 1].text : '') || '',
+            timestamp: new Date(convo.messages && convo.messages.length > 0 ? convo.messages[convo.messages.length - 1]?.created_at : Date.now())
+          }));
+          setChatHistory(historyItems);
+        }
+        
+        // Load localStorage as fallback
+        const localHistory = localStorage.getItem('chat-history');
+        if (localHistory) {
+          try {
+            const parsed = JSON.parse(localHistory);
+            setChatHistory(prev => {
+              const combined = [...prev, ...parsed.filter((item: ChatHistoryItem) => 
+                !prev.find(p => p.id === item.id)
+              )];
+              return combined.sort((a, b) => b.timestamp.getTime() - a.timestamp.getTime());
+            });
+          } catch (e) {
+            console.error('Error parsing localStorage chat history:', e);
+          }
+        }
+      } catch (err: any) {
+        // If unauthorized, try localStorage
+        if (err.response?.status === 401 || err.response?.status === 403) {
+          const localHistory = localStorage.getItem('chat-history');
+          if (localHistory) {
+            try {
+              setChatHistory(JSON.parse(localHistory));
+            } catch (e) {
+              console.error('Error loading localStorage chat history:', e);
+            }
+          }
+        }
+      } finally {
+        setIsLoadingHistory(false);
+      }
+    };
+    loadChatHistory();
+  }, []);
 
   const generateChatTitle = (firstMessage: string) => {
     const words = firstMessage.toLowerCase().split(' ').slice(0, 3);
@@ -53,13 +104,54 @@ const ChatbotPage = () => {
     }]);
   };
 
-  const switchToChat = (chatId: string) => {
+  const switchToChat = async (chatId: string) => {
     setActiveChatId(chatId);
-    // In a real app, you'd load messages from storage/API
     if (chatId === 'current') {
       setMessages([{
         type: 'bot',
         content: "Hi! I'm your AI Career Assistant. How can I help you today? You can ask me about career paths, skills, or anything else.",
+        timestamp: new Date()
+      }]);
+    } else {
+      // Load messages for this chat from API
+      try {
+        const { data } = await api.get('/api/chat/history/');
+        if (data && Array.isArray(data)) {
+          const convo = data.find((c: any) => (c.conversation_id || c.id) === chatId);
+          if (convo && convo.messages && Array.isArray(convo.messages)) {
+            const loadedMessages: Message[] = convo.messages.map((msg: any) => ({
+              type: msg.role === 'user' ? 'user' : 'bot',
+              content: msg.text || msg.content || '',
+              timestamp: new Date(msg.created_at || Date.now())
+            }));
+            if (loadedMessages.length > 0) {
+              setMessages(loadedMessages);
+              return;
+            }
+          }
+        }
+      } catch (err) {
+        // Continue to localStorage fallback
+      }
+      
+      // Fallback to localStorage
+      const localChats = localStorage.getItem(`chat-${chatId}`);
+      if (localChats) {
+        try {
+          const parsed = JSON.parse(localChats);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            setMessages(parsed);
+            return;
+          }
+        } catch (e) {
+          // Continue to default
+        }
+      }
+      
+      // Default empty chat
+      setMessages([{
+        type: 'bot',
+        content: "Hi! I'm your AI Career Assistant. How can I help you today?",
         timestamp: new Date()
       }]);
     }
@@ -107,11 +199,29 @@ const ChatbotPage = () => {
         message: currentInput,
       });
       const botMessage: Message = { type: 'bot', content: data.text || data.reply || '...', timestamp: new Date() };
-      setMessages(prev => [...prev, botMessage]);
+      setMessages(prev => {
+        const updated = [...prev, botMessage];
+        // Save to localStorage as backup
+        localStorage.setItem(`chat-${activeChatId}`, JSON.stringify(updated));
+        return updated;
+      });
     } catch (err) {
       const botMessage: Message = { type: 'bot', content: 'Sorry, something went wrong contacting the assistant.', timestamp: new Date() };
-      setMessages(prev => [...prev, botMessage]);
+      setMessages(prev => {
+        const updated = [...prev, botMessage];
+        localStorage.setItem(`chat-${activeChatId}`, JSON.stringify(updated));
+        return updated;
+      });
     }
+    
+    // Update chat history in localStorage
+    const updatedHistory = chatHistory.map(chat => 
+      chat.id === activeChatId 
+        ? { ...chat, lastMessage: currentInput, timestamp: new Date() }
+        : chat
+    );
+    setChatHistory(updatedHistory);
+    localStorage.setItem('chat-history', JSON.stringify(updatedHistory));
   };
 
   return (

@@ -83,9 +83,6 @@ export const RoadmapProvider = ({ children }: { children: ReactNode }) => {
   const addRoadmapItem = async (item: Omit<RoadmapItem, 'id' | 'createdAt'>) => {
     setIsLoading(true);
     setError(null);
-    // #region agent log
-    fetch('http://127.0.0.1:7242/ingest/fa5d49d2-7751-4c5d-8580-f135a455c0d0',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'RoadmapContext.tsx:83',message:'addRoadmapItem called',data:{itemTitle:item.title,itemSource:item.source},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'D'})}).catch(()=>{});
-    // #endregion
     try {
       // Convert resources to backend format (array of objects or strings)
       const resourcesForBackend = item.resources.map((r: any) => 
@@ -102,23 +99,14 @@ export const RoadmapProvider = ({ children }: { children: ReactNode }) => {
         resources: resourcesForBackend,
         source: item.source,
       });
-      // #region agent log
-      fetch('http://127.0.0.1:7242/ingest/fa5d49d2-7751-4c5d-8580-f135a455c0d0',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'RoadmapContext.tsx:106',message:'Item saved successfully to backend',data:{itemId:response.data.id,itemTitle:item.title},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'D'})}).catch(()=>{});
-      // #endregion
       const newItem: RoadmapItem = {
         ...response.data,
         id: response.data.id.toString(),
       };
       setRoadmapItems(prev => [...prev, newItem]);
     } catch (e: any) {
-      // #region agent log
-      fetch('http://127.0.0.1:7242/ingest/fa5d49d2-7751-4c5d-8580-f135a455c0d0',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'RoadmapContext.tsx:107',message:'addRoadmapItem error',data:{status:e.response?.status,statusText:e.response?.statusText,itemTitle:item.title},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'D'})}).catch(()=>{});
-      // #endregion
       // If 401/403, user is not authenticated - save to localStorage
       if (e.response?.status === 401 || e.response?.status === 403) {
-        // #region agent log
-        fetch('http://127.0.0.1:7242/ingest/fa5d49d2-7751-4c5d-8580-f135a455c0d0',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'RoadmapContext.tsx:109',message:'401/403 - saving to localStorage',data:{itemTitle:item.title},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'D'})}).catch(()=>{});
-        // #endregion
         const newItem: RoadmapItem = {
           ...item,
           id: `${Date.now()}-${Math.random()}`, // Use unique ID to avoid collisions
@@ -128,9 +116,6 @@ export const RoadmapProvider = ({ children }: { children: ReactNode }) => {
         setRoadmapItems(prev => {
           const updatedItems = [...prev, newItem];
           localStorage.setItem('career-roadmap', JSON.stringify(updatedItems));
-          // #region agent log
-          fetch('http://127.0.0.1:7242/ingest/fa5d49d2-7751-4c5d-8580-f135a455c0d0',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'RoadmapContext.tsx:117',message:'Item saved to localStorage',data:{itemTitle:item.title,itemsCount:updatedItems.length},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'D'})}).catch(()=>{});
-          // #endregion
           return updatedItems;
         });
       } else {
@@ -156,18 +141,12 @@ export const RoadmapProvider = ({ children }: { children: ReactNode }) => {
   const updateRoadmapItem = async (id: string, updates: Partial<RoadmapItem>) => {
     setIsLoading(true);
     setError(null);
-    // #region agent log
     const token = localStorage.getItem('authToken');
-    fetch('http://127.0.0.1:7242/ingest/fa5d49d2-7751-4c5d-8580-f135a455c0d0',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'RoadmapContext.tsx:137',message:'updateRoadmapItem called',data:{itemId:id,updates,hasToken:!!token,tokenLength:token?.length||0},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'A'})}).catch(()=>{});
-    // #endregion
     try {
       const response = await api.patch(`/api/roadmap/items/${id}/`, {
         ...updates,
         estimatedTime: updates.estimatedTime,
       });
-      // #region agent log
-      fetch('http://127.0.0.1:7242/ingest/fa5d49d2-7751-4c5d-8580-f135a455c0d0',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'RoadmapContext.tsx:142',message:'PATCH request succeeded',data:{itemId:id,status:response.status},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'A'})}).catch(()=>{});
-      // #endregion
       const updatedItem: RoadmapItem = {
         ...response.data,
         id: response.data.id.toString(),
@@ -176,9 +155,6 @@ export const RoadmapProvider = ({ children }: { children: ReactNode }) => {
         prev.map(item => item.id === id ? updatedItem : item)
       );
     } catch (e: any) {
-      // #region agent log
-      fetch('http://127.0.0.1:7242/ingest/fa5d49d2-7751-4c5d-8580-f135a455c0d0',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'RoadmapContext.tsx:150',message:'PATCH request failed',data:{itemId:id,status:e.response?.status,statusText:e.response?.statusText,errorMessage:e.message},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'A'})}).catch(()=>{});
-      // #endregion
       // If 401/403, user is not authenticated - update localStorage
       if (e.response?.status === 401 || e.response?.status === 403) {
         const updatedItems = roadmapItems.map(item => 
@@ -229,10 +205,7 @@ export const RoadmapProvider = ({ children }: { children: ReactNode }) => {
   const generateRoadmapFromChat = async (message: string) => {
     setIsLoading(true);
     setError(null);
-    // #region agent log
     console.log('[DEBUG] generateRoadmapFromChat called with message:', message);
-    fetch('http://127.0.0.1:7242/ingest/fa5d49d2-7751-4c5d-8580-f135a455c0d0',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'RoadmapContext.tsx:229',message:'generateRoadmapFromChat called',data:{messageLength:message.length,messagePreview:message.substring(0,100)},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'C'})}).catch(()=>{});
-    // #endregion
     try {
       // Call the chatbot API to generate roadmap suggestions
       const response = await api.post('/api/chat/ask/', {
@@ -264,9 +237,6 @@ Create 4-6 sequential steps. Each step must build on the previous one. Start imm
         fullResponse: aiResponse
       });
       
-      // #region agent log
-      fetch('http://127.0.0.1:7242/ingest/fa5d49d2-7751-4c5d-8580-f135a455c0d0',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'RoadmapContext.tsx:236',message:'AI response received',data:{responseLength:aiResponse.length,responsePreview:aiResponse.substring(0,200),hasTitle:!!aiResponse.match(/TITLE:/i),hasSteps:!!aiResponse.match(/STEP\s*\d+:/i),responseDataKeys:Object.keys(response.data)},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'C'})}).catch(()=>{});
-      // #endregion
       
       // Parse the AI response for step-by-step roadmap
       const titleMatch = aiResponse.match(/TITLE:\s*(.+?)(?:\n|$)/i);
@@ -294,9 +264,6 @@ Create 4-6 sequential steps. Each step must build on the previous one. Start imm
         console.log('[DEBUG] Steps array:', stepsArray.length, stepsArray.map(s => s.substring(0, 50)));
         
         stepsArray.forEach((step: string, index: number) => {
-          // #region agent log
-          fetch('http://127.0.0.1:7242/ingest/fa5d49d2-7751-4c5d-8580-f135a455c0d0',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'RoadmapContext.tsx:255',message:'Parsing step',data:{stepIndex:index,stepLength:step.length,stepPreview:step.substring(0,100),hasPipe:step.includes('|'),hasStepPrefix:!!step.match(/STEP\s*\d+:/i)},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'C'})}).catch(()=>{});
-          // #endregion
           // Try to parse structured format: title|description|time|skills|resources
           if (step.includes('|')) {
             const parts = step.split('|').map(p => p.trim());
@@ -393,9 +360,6 @@ Create 4-6 sequential steps. Each step must build on the previous one. Start imm
         }
       }
       
-      // #region agent log
-      fetch('http://127.0.0.1:7242/ingest/fa5d49d2-7751-4c5d-8580-f135a455c0d0',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'RoadmapContext.tsx:347',message:'About to add roadmap items',data:{itemsCount:roadmapItems.length,itemTitles:roadmapItems.map(i=>i.title)},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'C'})}).catch(()=>{});
-      // #endregion
       // Add all parsed items
       console.log('[DEBUG] Parsed roadmap items:', roadmapItems.length, roadmapItems.map(i => i.title));
       if (roadmapItems.length === 0) {
@@ -406,15 +370,9 @@ Create 4-6 sequential steps. Each step must build on the previous one. Start imm
       
       for (const item of roadmapItems) {
         console.log('[DEBUG] Adding roadmap item:', item.title);
-        // #region agent log
-        fetch('http://127.0.0.1:7242/ingest/fa5d49d2-7751-4c5d-8580-f135a455c0d0',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'RoadmapContext.tsx:350',message:'Calling addRoadmapItem',data:{itemTitle:item.title,itemSource:item.source},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'C'})}).catch(()=>{});
-        // #endregion
         await addRoadmapItem(item);
       }
       console.log('[DEBUG] All items added successfully');
-      // #region agent log
-      fetch('http://127.0.0.1:7242/ingest/fa5d49d2-7751-4c5d-8580-f135a455c0d0',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'RoadmapContext.tsx:355',message:'All items added',data:{itemsCount:roadmapItems.length},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'C'})}).catch(()=>{});
-      // #endregion
       
       // Check if user is authenticated - if not, show info message
       const token = localStorage.getItem('authToken');

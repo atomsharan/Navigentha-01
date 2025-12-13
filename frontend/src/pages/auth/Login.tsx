@@ -94,7 +94,7 @@ const Login = () => {
             </Link>
             <div className="flex items-center justify-center gap-2 mb-4">
               <Brain className="h-8 w-8 text-primary" />
-              <h1 className="text-2xl font-bold text-foreground">NEXORA</h1>
+              <h1 className="text-2xl font-bold text-foreground">Navigentha</h1>
             </div>
             <p className="text-muted-foreground">Welcome back! Sign in to continue your journey</p>
           </div>

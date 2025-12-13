@@ -11,3 +11,4 @@ mysqlclient
 requests
 beautifulsoup4
 lxml
+google-generativeai

@@ -1,18 +1,7 @@
 import React from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { useTheme } from '@/contexts/ThemeContext';
-import { Brain, Briefcase } from 'lucide-react';
-
+import { Link, useLocation } from 'react-router-dom';
 const CareerNavigation = () => {
   const location = useLocation();
-  const navigate = useNavigate();
-  const { theme, setTheme } = useTheme();
-
-  const handleThemeSwitch = () => {
-    setTheme('mental');
-    navigate('/mental');
-  };
   
   const navItems = [
     { path: '/career', label: 'Dashboard' },
@@ -43,36 +32,6 @@ const CareerNavigation = () => {
               {item.label}
             </Link>
           ))}
-        </div>
-        
-        <div className="flex items-center gap-2">
-          <div className="relative bg-muted rounded-full p-1 flex items-center">
-            <div 
-              className="absolute top-1 bottom-1 bg-primary rounded-full transition-all duration-300 ease-in-out"
-              style={{ 
-                width: 'calc(50% - 4px)', 
-                left: '2px',
-                transform: 'translateX(0)'
-              }}
-            />
-            <Button
-              variant="ghost"
-              size="sm"
-              className="relative z-10 bg-transparent text-primary-foreground font-medium px-4 py-2"
-            >
-              <Briefcase className="h-4 w-4 mr-2" />
-              Career
-            </Button>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={handleThemeSwitch}
-              className="relative z-10 bg-transparent text-muted-foreground hover:text-foreground font-medium px-4 py-2"
-            >
-              <Brain className="h-4 w-4 mr-2" />
-              Mental
-            </Button>
-          </div>
         </div>
       </div>
     </nav>

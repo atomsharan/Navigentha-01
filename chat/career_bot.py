@@ -3,7 +3,6 @@ from .utils.data_loader import load_dataset
 from .utils.mentor_engine import mentor_engine
 from .utils.ai_fallback import ai_fallback
 from .utils.gemini_fallback import gemini_fallback
-from .utils.gpt_fallback import gpt_fallback
 
 # load once
 CAREER_DATA = load_dataset("career_dataset.json")
@@ -11,22 +10,26 @@ CAREER_DATA = load_dataset("career_dataset.json")
 def chat_with_bot(user_message: str, history=None) -> dict:
     """
     Returns a dictionary with reply and metadata.
-    Uses Gemini first, then GPT as fallback for maximum capability.
-    Can answer career questions and general questions.
+    Uses ONLY Gemini API for career guidance.
+    Collects information about college, interests, academic preferences, and provides calculated output with roadmap.
     """
-    # Try Gemini first (it's free and works well)
+    # Use Gemini only - no fallback to GPT
     gem = gemini_fallback(user_message, CAREER_DATA, history=history)
     if gem is not None:
         return gem
     
-    # Fallback to GPT if Gemini fails (more capable, can answer anything)
-    gpt_response = gpt_fallback(user_message, CAREER_DATA, history=history)
-    if gpt_response is not None:
-        return gpt_response
+    # If Gemini fails, return a helpful error message
+    # Check if API key exists
+    from django.conf import settings
+    api_key = getattr(settings, 'GEMINI_API_KEY', None)
     
-    # Final fallback to simple response if both AI services fail
+    if not api_key:
+        error_msg = "API key is not configured. Please set GEMINI_API_KEY in settings."
+    else:
+        error_msg = "I'm having trouble connecting to the AI service. This could be due to:\n- API key authentication issue\n- Network connectivity problem\n- Service temporarily unavailable\n\nPlease check the server logs for more details and try again in a moment."
+    
     return {
-        "reply": "I'm having trouble connecting to my AI assistant right now. Please try again in a moment.",
+        "reply": error_msg,
         "career": None,
         "fallback": True,
         "confidence": 0,

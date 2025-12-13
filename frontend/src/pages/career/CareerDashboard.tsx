@@ -166,39 +166,71 @@ const CareerDashboard = () => {
             </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-4 border border-blue-200">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-blue-600 text-sm font-medium">Profile Views</p>
-                  <p className="text-2xl font-bold text-blue-900">{userProfile.profileViews}</p>
-                  <p className="text-xs text-blue-600">+12% this week</p>
-                </div>
-                <Eye className="h-8 w-8 text-blue-500" />
-              </div>
-            </div>
-            
-            <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-xl p-4 border border-green-200">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-green-600 text-sm font-medium">Connections</p>
-                  <p className="text-2xl font-bold text-green-900">{userProfile.connectionsCount}</p>
-                  <p className="text-xs text-green-600">+3 this week</p>
-                </div>
-                <Users className="h-8 w-8 text-green-500" />
-              </div>
-            </div>
-            
-            <div className="bg-gradient-to-r from-slate-50 to-slate-100 rounded-xl p-4 border border-slate-200">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-slate-600 text-sm font-medium">Pending Tasks</p>
-                  <p className="text-2xl font-bold text-slate-900">{pendingTasksCount}</p>
-                  <p className="text-xs text-slate-600">To be completed</p>
-                </div>
-                <Clock className="h-8 w-8 text-slate-500" />
-              </div>
-            </div>
+          {/* Metrics Table */}
+          <div className="bg-white rounded-xl border border-slate-200 overflow-hidden">
+            <table className="w-full">
+              <thead className="bg-gradient-to-r from-slate-50 to-slate-100">
+                <tr>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">Metric</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">Value</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">Status</th>
+                  <th className="px-6 py-4 text-center text-sm font-semibold text-slate-700">Icon</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-200">
+                <tr className="hover:bg-blue-50 transition-colors">
+                  <td className="px-6 py-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+                      <span className="text-sm font-medium text-blue-600">Profile Views</span>
+                    </div>
+                  </td>
+                  <td className="px-6 py-4">
+                    <span className="text-2xl font-bold text-blue-900">{userProfile.profileViews}</span>
+                  </td>
+                  <td className="px-6 py-4">
+                    <span className="text-xs text-blue-600">+12% this week</span>
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <Eye className="h-6 w-6 text-blue-500 mx-auto" />
+                  </td>
+                </tr>
+                <tr className="hover:bg-green-50 transition-colors">
+                  <td className="px-6 py-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                      <span className="text-sm font-medium text-green-600">Connections</span>
+                    </div>
+                  </td>
+                  <td className="px-6 py-4">
+                    <span className="text-2xl font-bold text-green-900">{userProfile.connectionsCount}</span>
+                  </td>
+                  <td className="px-6 py-4">
+                    <span className="text-xs text-green-600">+3 this week</span>
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <Users className="h-6 w-6 text-green-500 mx-auto" />
+                  </td>
+                </tr>
+                <tr className="hover:bg-slate-50 transition-colors">
+                  <td className="px-6 py-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 rounded-full bg-slate-500"></div>
+                      <span className="text-sm font-medium text-slate-600">Pending Tasks</span>
+                    </div>
+                  </td>
+                  <td className="px-6 py-4">
+                    <span className="text-2xl font-bold text-slate-900">{pendingTasksCount}</span>
+                  </td>
+                  <td className="px-6 py-4">
+                    <span className="text-xs text-slate-600">To be completed</span>
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <Clock className="h-6 w-6 text-slate-500 mx-auto" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
 

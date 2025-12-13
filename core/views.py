@@ -13,7 +13,7 @@ from .models import Career, RoadmapItem
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.response import Response
-from .serializers import UserSerializer
+from .serializers import UserSerializer, RegisterSerializer
 
 def home(request):
     """A simple view for the root URL to confirm the API is running."""
@@ -102,52 +102,38 @@ def career_roadmap(request):
     return _get_career_data(request, "future_paths", "roadmap")
 
 
-@csrf_exempt
+@api_view(['POST'])
+@permission_classes([AllowAny])
 def register_user(request):
-    if request.method != "POST":
-        return JsonResponse({"error": "Method not allowed"}, status=405)
-    try:
-        data = json.loads((request.body or b"").decode() or "{}")
-    except Exception:
-        return JsonResponse({"error": "Invalid JSON body"}, status=400)
-
-    username = (data.get("username") or "").strip()
-    password = (data.get("password") or "").strip()
-
-    if not username or not password:
-        return JsonResponse({"error": "username and password are required"}, status=400)
-
-    if User.objects.filter(username=username).exists():
-        return JsonResponse({"error": "Username already exists"}, status=400)
-
-    try:
-        user = User.objects.create_user(username=username, password=password)
-    except Exception as e:
-        return JsonResponse({"error": f"Failed to create user: {e}"}, status=500)
-
-    return JsonResponse({"message": "User registered successfully", "user_id": user.id})
+    serializer = RegisterSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data, status=201)
+    return Response(serializer.errors, status=400)
 
 
-@csrf_exempt
+@api_view(['POST'])
+@permission_classes([AllowAny])
 def login_user(request):
-    if request.method != "POST":
-        return JsonResponse({"error": "Method not allowed"}, status=405)
     try:
-        data = json.loads((request.body or b"").decode() or "{}")
-    except Exception:
-        return JsonResponse({"error": "Invalid JSON body"}, status=400)
+        email = request.data.get('email', '').strip()
+        password = request.data.get('password', '').strip()
 
-    username = (data.get("username") or "").strip()
-    password = (data.get("password") or "").strip()
+        if not email or not password:
+            return JsonResponse({"error": "email and password are required"}, status=400)
 
-    if not username or not password:
-        return JsonResponse({"error": "username and password are required"}, status=400)
-
-    user = authenticate(username=username, password=password)
-    if user:
-        login(request, user)
-        return JsonResponse({"message": "Login successful", "user_id": user.id})
-    return JsonResponse({"error": "Invalid credentials"}, status=400)
+        # Authenticate using email as the username
+        user = authenticate(username=email, password=password)
+        
+        if user:
+            login(request, user)
+            return JsonResponse({"message": "Login successful", "user_id": user.id})
+        
+        return JsonResponse({"error": "Invalid credentials"}, status=400)
+    except Exception as e:
+        # Log the exception for debugging purposes
+        print(f"Login error: {e}")
+        return JsonResponse({"error": "An unexpected error occurred during login."}, status=500)
 
 @api_view(['GET', 'PATCH'])
 @permission_classes([IsAuthenticated])

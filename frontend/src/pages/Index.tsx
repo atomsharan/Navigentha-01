@@ -251,7 +251,7 @@ const Index = () => {
             </Badge>
             <h2 className="text-4xl font-bold mb-4" style={{ color: 'hsl(var(--homepage-headings))' }}>Success Stories</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              See how NEXORA has transformed careers and helped thousands achieve their professional dreams
+              See how Navigentha has transformed careers and helped thousands achieve their professional dreams
             </p>
           </div>
           
@@ -319,7 +319,7 @@ const Index = () => {
             Ready to Transform Your Career?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Join thousands of students and professionals who've found their perfect career path with NEXORA
+            Join thousands of students and professionals who've found their perfect career path with Navigentha
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/register">
